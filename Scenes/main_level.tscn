@@ -15,12 +15,19 @@ radiance_size = 6
 [sub_resource type="Environment" id="Environment_mirf0"]
 background_mode = 2
 sky = SubResource("Sky_3hevr")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.1
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.3
+glow_blend_mode = 1
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.1
+fog_sky_affect = 0.0
 
 [node name="Main_Level" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.981293, -0.12782, -0.143968, 0, 0.747798, -0.663926, 0.192522, 0.651506, 0.733809, 0, 0, 0)
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mirf0")
