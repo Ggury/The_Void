@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccfr1aoxvyupl"]
+[gd_scene load_steps=6 format=3 uid="uid://cc2wfhhw0nxpc"]
 
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_n6nw6"]
 [ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_yu2rs"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_po064"]
-sky_top_color = Color(1, 1, 1, 1)
-sky_horizon_color = Color(0.831373, 0.795098, 0.75, 1)
-ground_bottom_color = Color(0.32549, 0.180392, 0, 1)
-ground_horizon_color = Color(0.831373, 0.795098, 0.75, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7cgmu"]
+panorama = ExtResource("1_n6nw6")
+filter = false
 
 [sub_resource type="Sky" id="Sky_3hevr"]
-sky_material = SubResource("ProceduralSkyMaterial_po064")
+sky_material = SubResource("PanoramaSkyMaterial_7cgmu")
+process_mode = 2
+radiance_size = 6
 
 [sub_resource type="Environment" id="Environment_mirf0"]
 background_mode = 2
