@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://coj5gbwp6muvn"]
+
+[ext_resource type="Script" path="res://Monster/monster.gd" id="1_d8bwo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xaq5b"]
+radius = 50.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_fgc7s"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7epf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4oqcv"]
+radius = 1000.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_np2ni"]
+size = Vector3(62.6349, 33.2813, 43.5396)
+
+[node name="Monster" type="CharacterBody3D"]
+script = ExtResource("1_d8bwo")
+min_speed = 30
+max_speed = 50
+
+[node name="MonsterCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_xaq5b")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("SphereMesh_fgc7s")
+material = SubResource("StandardMaterial3D_u7epf")
+
+[node name="NearPlayerArea" type="Area3D" parent="."]
+
+[node name="NearPlayerCollisionShape3D" type="CollisionShape3D" parent="NearPlayerArea"]
+shape = SubResource("SphereShape3D_4oqcv")
+
+[node name="MouthArea" type="Area3D" parent="."]
+
+[node name="MouthCollisionShape" type="CollisionShape3D" parent="MouthArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.0584, 0, 0)
+shape = SubResource("BoxShape3D_np2ni")
+
+[connection signal="body_exited" from="NearPlayerArea" to="." method="_on_near_player_area_body_exited"]

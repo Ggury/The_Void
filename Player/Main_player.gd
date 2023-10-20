@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-signal get_coords
+signal radar_used
 
 @export var speed = 0.0
 @export var jumpstrnght = 0.0
@@ -36,7 +36,7 @@ func _input(event):
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Radar"):
-		emit_signal("get_coords")
+		emit_signal("radar_used")
 	
 # передвижение
 
