@@ -42,4 +42,8 @@ offset_top = 8.0
 offset_right = 694.0
 offset_bottom = 50.0
 theme_override_colors/background_color = Color(0, 0, 0, 1)
-text = "ТЫ ЧУРКА БЛЯТЬ"
+
+[node name="RadarTimer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="RadarTimer" to="." method="_on_radar_timer_timeout"]

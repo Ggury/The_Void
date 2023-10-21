@@ -13,11 +13,9 @@ signal radar_used
 @export var isgravity :bool
 @export var isgrv:float
 @export var fix_tag = "gaykadefect"
-@export var _timer = 1.0
-@export var _timer2 = 0.0
-@export var def_timer = 4.0
 @export var distance = Vector3(0,0,0)
-@export var is_radar = false
+
+var is_radar = false
 
 var direction
 var yaw = 0
@@ -39,32 +37,19 @@ func _input(event):
 		$".".rotation_degrees.x = pitch
 
 
-func _physics_process(delta):
-	
-	if is_radar:
-		_timer -= delta
-		if _timer<=0:
-			emit_signal("radar_used")
-			print(distance)
-			$AudioStreamPlayer3D.play()
-			_timer = def_timer
-			$CanvasLayer/Control/TextEdit.text = str("x:"+str(int(distance.x)) +" y:" + str(int(distance.y)) + " z:" + str(int(distance.z)))
-#			if 10-(distance/50)<=0:
-#				mode = 1
-#			else:
-#				mode = int(10-(distance/20))
-#				print(mode)
-#			_timer2 = 0.5 + 1.0/(mode)
-#			print (_timer2)
+func _process(delta):
 	if Input.is_action_just_pressed("Radar"):
-		_timer = 0.0
 		is_radar = !is_radar
-		$CanvasLayer/Control/TextEdit.visible = !$CanvasLayer/Control/TextEdit.visible
-#		emit_signal("radar_used")
-#		print(distance)
-	
-# передвижение
+		
+		if is_radar:
+			$RadarTimer.start()
+		else:
+			$RadarTimer.stop()
 
+		$CanvasLayer/Control/TextEdit.visible = !$CanvasLayer/Control/TextEdit.visible
+
+
+func _physics_process(delta):
 	var input_dir = Input.get_vector("ui_left", "ui_right" , "ui_up","ui_down")
 	var vert_dir = Input.get_action_strength("Jump") - Input.get_action_strength("Crawl")
 	var direction = (transform.basis * Vector3(input_dir.x, vert_dir * int(isgravity), input_dir.y))
@@ -82,3 +67,11 @@ func _physics_process(delta):
 			velocity.y = lerpf(velocity.y,0,delta*2)
 		velocity.z = lerpf(velocity.z,0,delta*2)
 	move_and_slide()
+
+
+
+func _on_radar_timer_timeout():
+	emit_signal("radar_used")
+	print(distance)
+	$AudioStreamPlayer3D.play()
+	$CanvasLayer/Control/TextEdit.text = str("x:"+str(int(distance.x)) +" y:" + str(int(distance.y)) + " z:" + str(int(distance.z)))

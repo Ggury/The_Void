@@ -34,7 +34,6 @@ environment = SubResource("Environment_mirf0")
 
 [node name="MainPlayer" parent="." instance=ExtResource("1_yu2rs")]
 isgravity = true
-def_timer = 2.0
 
 [node name="Monster" parent="." instance=ExtResource("2_dyx1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.58893, 0, -565.769)
