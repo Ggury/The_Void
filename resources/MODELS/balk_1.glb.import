@@ -32,7 +32,8 @@ _subresources={
 "nodes": {
 "PATH:Cube": {
 "decomposition/max_concavity": 0.0,
-"generate/physics": true
+"generate/physics": true,
+"physics/shape_type": 2
 }
 }
 }

@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://6ocovhf65imp"]
+[gd_scene load_steps=5 format=3 uid="uid://6ocovhf65imp"]
 
 [ext_resource type="Script" path="res://Player/Main_player.gd" id="1_8ccay"]
+[ext_resource type="AudioStream" uid="uid://dgmglld1mxmpj" path="res://resources/Sounds/448743__matrixxx__underwater-signal.wav" id="2_xmcxs"]
+[ext_resource type="AudioStream" uid="uid://cr42shk31khgs" path="res://resources/Sounds/445723__matrixxx__radar-something-detected-01-sec.wav" id="3_mritt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ry3fo"]
 radius = 0.260429
@@ -17,3 +19,27 @@ shape = SubResource("CapsuleShape3D_ry3fo")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 current = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_xmcxs")
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_mritt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 644.0
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 0
+offset_left = 462.0
+offset_top = 8.0
+offset_right = 694.0
+offset_bottom = 50.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+text = "ТЫ ЧУРКА БЛЯТЬ"

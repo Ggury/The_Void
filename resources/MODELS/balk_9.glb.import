@@ -30,7 +30,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Куб004": {
+"PATH:Куб_004": {
 "generate/physics": true,
 "physics/shape_type": 2
 }

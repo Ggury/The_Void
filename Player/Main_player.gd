@@ -13,6 +13,11 @@ signal radar_used
 @export var isgravity :bool
 @export var isgrv:float
 @export var fix_tag = "gaykadefect"
+@export var _timer = 1.0
+@export var _timer2 = 0.0
+@export var def_timer = 4.0
+@export var distance = Vector3(0,0,0)
+@export var is_radar = false
 
 var direction
 var yaw = 0
@@ -35,8 +40,28 @@ func _input(event):
 
 
 func _physics_process(delta):
+	
+	if is_radar:
+		_timer -= delta
+		if _timer<=0:
+			emit_signal("radar_used")
+			print(distance)
+			$AudioStreamPlayer3D.play()
+			_timer = def_timer
+			$CanvasLayer/Control/TextEdit.text = str("x:"+str(int(distance.x)) +" y:" + str(int(distance.y)) + " z:" + str(int(distance.z)))
+#			if 10-(distance/50)<=0:
+#				mode = 1
+#			else:
+#				mode = int(10-(distance/20))
+#				print(mode)
+#			_timer2 = 0.5 + 1.0/(mode)
+#			print (_timer2)
 	if Input.is_action_just_pressed("Radar"):
-		emit_signal("radar_used")
+		_timer = 0.0
+		is_radar = !is_radar
+		$CanvasLayer/Control/TextEdit.visible = !$CanvasLayer/Control/TextEdit.visible
+#		emit_signal("radar_used")
+#		print(distance)
 	
 # передвижение
 

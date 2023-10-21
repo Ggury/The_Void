@@ -28,7 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.898288, 0.0185909, -3.46419
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.91614, 0.0239128, -0.516426)
 
 [node name="balk_5" parent="shipwreck21" instance=ExtResource("3_mc04y")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.904493, -1.65834, -0.542239)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.904493, -1.65834, -0.508111)
 
 [node name="balk_19" parent="shipwreck21" instance=ExtResource("4_fxb5s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57999, 2.30291, -2.64293)
@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.8731
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.84396, 0.908697, -0.349941)
 
 [node name="balk_16" parent="shipwreck21" instance=ExtResource("6_p7q28")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, -0.378643)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, 3.9707)
 
 [node name="balk_14" parent="shipwreck21" instance=ExtResource("7_15rw6")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 3.90216, 2.52097, -0.503969)
@@ -63,53 +63,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.914053, -1.64308, 1.47948)
 [node name="balk_13" parent="shipwreck21" instance=ExtResource("10_mjlgj")]
 transform = Transform3D(1, 0, 0, 0, 0.949765, 0.312965, 0, -0.312965, 0.949765, 0.914053, -1.39399, 2.59386)
 
-[node name="shipwreck21" type="Node3D" parent="shipwreck21"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -0.747926, 0, 0)
+[node name="shipwreck22" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.46595, 0, 0.00292945)
 
-[node name="balk_10" parent="shipwreck21/shipwreck21" instance=ExtResource("1_etrlq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27252, 0.0207484, -3.46554)
+[node name="balk_10" parent="shipwreck22" instance=ExtResource("1_etrlq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.01285, 0.0207484, -1.757)
 
-[node name="balk_9" parent="shipwreck21/shipwreck21" instance=ExtResource("2_nm44q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.898288, 0.0185909, -3.46419)
+[node name="balk_9" parent="shipwreck22" instance=ExtResource("2_nm44q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93248, 0.0185909, -3.46419)
 
-[node name="balk_11" parent="shipwreck21/shipwreck21" instance=ExtResource("2_nm44q")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.91614, 0.0239128, -0.516426)
+[node name="balk_11" parent="shipwreck22" instance=ExtResource("2_nm44q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.04101, 0.0239128, -0.411761)
 
-[node name="balk_5" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.904493, -1.65834, -0.542239)
+[node name="balk_5" parent="shipwreck22" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1.9078, -1.65834, -0.329347)
 
-[node name="balk_19" parent="shipwreck21/shipwreck21" instance=ExtResource("4_fxb5s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57999, 2.30291, -2.64293)
+[node name="balk_19" parent="shipwreck22" instance=ExtResource("4_fxb5s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.194171, 2.30291, -2.07238)
 
-[node name="balk_6" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876362, 2.52578, -3.46335)
+[node name="balk_6" parent="shipwreck22" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92908, 2.50876, -3.46335)
 
-[node name="balk_7" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.92183, 2.52578, -0.54446)
+[node name="balk_7" parent="shipwreck22" instance=ExtResource("3_mc04y")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.931121, 2.52578, -0.439795)
 
-[node name="balk_8" parent="shipwreck21/shipwreck21" instance=ExtResource("5_t2876")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.873122, 0.919331, -1.8941)
+[node name="balk_8" parent="shipwreck22" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.03263, 0.919331, -1.8941)
 
-[node name="balk_12" parent="shipwreck21/shipwreck21" instance=ExtResource("5_t2876")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.84396, 0.908697, -0.349941)
+[node name="balk_12" parent="shipwreck22" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.00346, 0.908697, -0.349941)
 
-[node name="balk_16" parent="shipwreck21/shipwreck21" instance=ExtResource("6_p7q28")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, -0.378643)
+[node name="balk_16" parent="shipwreck22" instance=ExtResource("6_p7q28")]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 1.89019, -1.64922, -0.399195)
 
-[node name="balk_14" parent="shipwreck21/shipwreck21" instance=ExtResource("7_15rw6")]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 3.90216, 2.52097, -0.503969)
+[node name="balk_14" parent="shipwreck22" instance=ExtResource("7_15rw6")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, -1, -1, -4.37114e-08, 0, -4.37114e-08, 1, -4.37114e-08, -0.980658, 2.52097, -0.310496)
 
-[node name="balk_3" parent="shipwreck21/shipwreck21" instance=ExtResource("8_l6cdo")]
-transform = Transform3D(1, 0, 0, 0, 0.995668, 0.0929788, 0, -0.0929788, 0.995668, 1.13021, -1.72462, 1.5429)
+[node name="balk_3" parent="shipwreck22" instance=ExtResource("8_l6cdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.982379, 2.47164, 1.5429)
 
-[node name="balk_2" parent="shipwreck21/shipwreck21" instance=ExtResource("9_kjrow")]
-transform = Transform3D(0.861904, -0.507072, 0, 0.507072, 0.861904, 0, 0, 0, 1, 3.27525, -1.38101, 2.65452)
+[node name="balk_2" parent="shipwreck22" instance=ExtResource("9_kjrow")]
+transform = Transform3D(0.877088, 0.48033, 0, -0.48033, 0.877088, 0, 0, 0, 1, -0.330958, -1.26493, 2.65452)
 
-[node name="balk_4" parent="shipwreck21/shipwreck21" instance=ExtResource("10_mjlgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89377, 0.479297, 1.47948)
+[node name="balk_4" parent="shipwreck22" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.07356, -1.64308, 1.47948)
 
-[node name="balk_13" parent="shipwreck21/shipwreck21" instance=ExtResource("10_mjlgj")]
-transform = Transform3D(1, 0, 0, 0, 0.949765, 0.312965, 0, -0.312965, 0.949765, 3.89377, 0.728395, 2.59386)
+[node name="balk_13" parent="shipwreck22" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 0.949765, -0.312965, 0, 0.312965, 0.949765, 2.07356, -1.91119, 2.59386)
 
 [node name="balk_14" parent="." instance=ExtResource("7_15rw6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876552, 2.56724, -3.47855)
@@ -121,10 +121,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58006, 2.81431, -3.43724)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.90548, 2.53945, -0.553203)
 
 [node name="balk_16" parent="." instance=ExtResource("7_15rw6")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.67131, 2.60211, -0.492396)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.45169, 2.60211, -0.492396)
 
 [node name="balk_17" parent="." instance=ExtResource("12_isb47")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58963, 0.893728, 0.58517)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46724, 0.893728, 0.646074)
 
 [node name="balk_18" parent="." instance=ExtResource("13_t1iv1")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.907895, 0.897416, 1.20708)

@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="The_Void"
-run/main_scene="res://Scenes/main_level.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

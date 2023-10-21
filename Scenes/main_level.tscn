@@ -1,13 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvbinmmkmjnbo"]
+[gd_scene load_steps=10 format=3 uid="uid://ccfr1aoxvyupl"]
 
-[ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_pqg0s"]
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_bt54g"]
+[ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_v2kk4"]
+[ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_yu2rs"]
 [ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="2_dyx1s"]
+[ext_resource type="PackedScene" uid="uid://b05d8yg51jp8e" path="res://decorations/Shipwreck_2.tscn" id="4_lyltq"]
+[ext_resource type="PackedScene" uid="uid://dl0gukivyk7px" path="res://decorations/Shipwreck_3.tscn" id="6_cxcpt"]
 
-[node name="main_level" type="Node3D"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_e4wsf"]
+panorama = ExtResource("1_bt54g")
 
-[node name="MainPlayer" parent="." instance=ExtResource("1_pqg0s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.068089, 1.19209e-07, -0.0825877)
+[sub_resource type="Sky" id="Sky_3hevr"]
+sky_material = SubResource("PanoramaSkyMaterial_e4wsf")
+
+[sub_resource type="Environment" id="Environment_mirf0"]
+background_mode = 2
+sky = SubResource("Sky_3hevr")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.65
+glow_enabled = true
+glow_intensity = 0.5
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.03
+fog_sky_affect = 0.0
+
+[node name="Main_Level" type="Node3D"]
+script = ExtResource("1_v2kk4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mirf0")
+
+[node name="MainPlayer" parent="." instance=ExtResource("1_yu2rs")]
 isgravity = true
+def_timer = 2.0
 
 [node name="Monster" parent="." instance=ExtResource("2_dyx1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11121, -1.19209e-07, -574.459)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.58893, 0, -565.769)
+
+[node name="Shipwreck_2" parent="." instance=ExtResource("4_lyltq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12323, 0, -17.7144)
+
+[node name="Shipwreck_3" parent="." groups=["radardetect"] instance=ExtResource("6_cxcpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6621, 49.1016, 65.7732)
