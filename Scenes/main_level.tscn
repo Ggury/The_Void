@@ -1,39 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc2wfhhw0nxpc"]
+[gd_scene load_steps=5 format=3 uid="uid://cc2wfhhw0nxpc"]
 
-[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_n6nw6"]
+[ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_q4rs1"]
 [ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_yu2rs"]
-
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7cgmu"]
-panorama = ExtResource("1_n6nw6")
-filter = false
-
-[sub_resource type="Sky" id="Sky_3hevr"]
-sky_material = SubResource("PanoramaSkyMaterial_7cgmu")
-process_mode = 2
-radiance_size = 6
-
-[sub_resource type="Environment" id="Environment_mirf0"]
-background_mode = 2
-sky = SubResource("Sky_3hevr")
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.1
-glow_enabled = true
-glow_intensity = 1.0
-glow_bloom = 0.3
-glow_blend_mode = 1
-fog_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 0.1
-fog_sky_affect = 0.0
+[ext_resource type="Environment" uid="uid://biw3oe3cy5oss" path="res://Scenes/lighting_env.tres" id="2_4k32d"]
+[ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="3_0u4x0"]
 
 [node name="Main_Level" type="Node3D"]
+script = ExtResource("1_q4rs1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_mirf0")
+environment = ExtResource("2_4k32d")
 
-[node name="Main_player" parent="." instance=ExtResource("1_yu2rs")]
+[node name="MainPlayer" parent="." instance=ExtResource("1_yu2rs")]
 isgravity = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.51857)
+
+[node name="Monster" parent="." instance=ExtResource("3_0u4x0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192.727, 0, -948.138)
+
+[connection signal="radar_used" from="MainPlayer" to="Monster" method="_on_main_player_radar_used"]
