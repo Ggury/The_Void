@@ -1,0 +1,130 @@
+[gd_scene load_steps=14 format=3 uid="uid://b05d8yg51jp8e"]
+
+[ext_resource type="PackedScene" uid="uid://b2h3om14d1he2" path="res://resources/MODELS/balk_10.glb" id="1_etrlq"]
+[ext_resource type="PackedScene" uid="uid://rt5853lffycn" path="res://resources/MODELS/balk_9.glb" id="2_nm44q"]
+[ext_resource type="PackedScene" uid="uid://co8rfmj4fetut" path="res://resources/MODELS/balk_5.glb" id="3_mc04y"]
+[ext_resource type="PackedScene" uid="uid://crw7u8agam20o" path="res://resources/MODELS/balk_19.glb" id="4_fxb5s"]
+[ext_resource type="PackedScene" uid="uid://bph0imad75g7p" path="res://resources/MODELS/balk_6.glb" id="5_t2876"]
+[ext_resource type="PackedScene" uid="uid://doiff1nft6hcb" path="res://resources/MODELS/balk_16.glb" id="6_p7q28"]
+[ext_resource type="PackedScene" uid="uid://db1vvca5eq4ad" path="res://resources/MODELS/balk_14.glb" id="7_15rw6"]
+[ext_resource type="PackedScene" uid="uid://cydmccmtsg4pp" path="res://resources/MODELS/balk_3.glb" id="8_l6cdo"]
+[ext_resource type="PackedScene" uid="uid://tmmuoira1pcb" path="res://resources/MODELS/balk_2.glb" id="9_kjrow"]
+[ext_resource type="PackedScene" uid="uid://cb57jpx3041uh" path="res://resources/MODELS/balk_4.glb" id="10_mjlgj"]
+[ext_resource type="PackedScene" uid="uid://deomnn0mbkyft" path="res://resources/MODELS/balk_13.glb" id="11_ws7kv"]
+[ext_resource type="PackedScene" uid="uid://dnvwhujjtxulb" path="res://resources/MODELS/balk_17.glb" id="12_isb47"]
+[ext_resource type="PackedScene" uid="uid://cvmt1u5c8j67e" path="res://resources/MODELS/balk_18.glb" id="13_t1iv1"]
+
+[node name="Shipwreck_2" type="Node3D"]
+
+[node name="shipwreck21" type="Node3D" parent="."]
+
+[node name="balk_10" parent="shipwreck21" instance=ExtResource("1_etrlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27252, 0.0207484, -3.46554)
+
+[node name="balk_9" parent="shipwreck21" instance=ExtResource("2_nm44q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.898288, 0.0185909, -3.46419)
+
+[node name="balk_11" parent="shipwreck21" instance=ExtResource("2_nm44q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.91614, 0.0239128, -0.516426)
+
+[node name="balk_5" parent="shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.904493, -1.65834, -0.542239)
+
+[node name="balk_19" parent="shipwreck21" instance=ExtResource("4_fxb5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57999, 2.30291, -2.64293)
+
+[node name="balk_6" parent="shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876362, 2.52578, -3.46335)
+
+[node name="balk_7" parent="shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.92183, 2.52578, -0.54446)
+
+[node name="balk_8" parent="shipwreck21" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.873122, 0.919331, -1.8941)
+
+[node name="balk_12" parent="shipwreck21" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.84396, 0.908697, -0.349941)
+
+[node name="balk_16" parent="shipwreck21" instance=ExtResource("6_p7q28")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, -0.378643)
+
+[node name="balk_14" parent="shipwreck21" instance=ExtResource("7_15rw6")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 3.90216, 2.52097, -0.503969)
+
+[node name="balk_3" parent="shipwreck21" instance=ExtResource("8_l6cdo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85205, 0.582862, 1.5429)
+
+[node name="balk_2" parent="shipwreck21" instance=ExtResource("9_kjrow")]
+transform = Transform3D(0.861904, -0.507072, 0, 0.507072, 0.861904, 0, 0, 0, 1, 3.27525, -1.38101, 2.65452)
+
+[node name="balk_4" parent="shipwreck21" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.914053, -1.64308, 1.47948)
+
+[node name="balk_13" parent="shipwreck21" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 0.949765, 0.312965, 0, -0.312965, 0.949765, 0.914053, -1.39399, 2.59386)
+
+[node name="shipwreck21" type="Node3D" parent="shipwreck21"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -0.747926, 0, 0)
+
+[node name="balk_10" parent="shipwreck21/shipwreck21" instance=ExtResource("1_etrlq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27252, 0.0207484, -3.46554)
+
+[node name="balk_9" parent="shipwreck21/shipwreck21" instance=ExtResource("2_nm44q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.898288, 0.0185909, -3.46419)
+
+[node name="balk_11" parent="shipwreck21/shipwreck21" instance=ExtResource("2_nm44q")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.91614, 0.0239128, -0.516426)
+
+[node name="balk_5" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.904493, -1.65834, -0.542239)
+
+[node name="balk_19" parent="shipwreck21/shipwreck21" instance=ExtResource("4_fxb5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57999, 2.30291, -2.64293)
+
+[node name="balk_6" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876362, 2.52578, -3.46335)
+
+[node name="balk_7" parent="shipwreck21/shipwreck21" instance=ExtResource("3_mc04y")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.92183, 2.52578, -0.54446)
+
+[node name="balk_8" parent="shipwreck21/shipwreck21" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.873122, 0.919331, -1.8941)
+
+[node name="balk_12" parent="shipwreck21/shipwreck21" instance=ExtResource("5_t2876")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.84396, 0.908697, -0.349941)
+
+[node name="balk_16" parent="shipwreck21/shipwreck21" instance=ExtResource("6_p7q28")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, -0.378643)
+
+[node name="balk_14" parent="shipwreck21/shipwreck21" instance=ExtResource("7_15rw6")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 3.90216, 2.52097, -0.503969)
+
+[node name="balk_3" parent="shipwreck21/shipwreck21" instance=ExtResource("8_l6cdo")]
+transform = Transform3D(1, 0, 0, 0, 0.995668, 0.0929788, 0, -0.0929788, 0.995668, 1.13021, -1.72462, 1.5429)
+
+[node name="balk_2" parent="shipwreck21/shipwreck21" instance=ExtResource("9_kjrow")]
+transform = Transform3D(0.861904, -0.507072, 0, 0.507072, 0.861904, 0, 0, 0, 1, 3.27525, -1.38101, 2.65452)
+
+[node name="balk_4" parent="shipwreck21/shipwreck21" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.89377, 0.479297, 1.47948)
+
+[node name="balk_13" parent="shipwreck21/shipwreck21" instance=ExtResource("10_mjlgj")]
+transform = Transform3D(1, 0, 0, 0, 0.949765, 0.312965, 0, -0.312965, 0.949765, 3.89377, 0.728395, 2.59386)
+
+[node name="balk_14" parent="." instance=ExtResource("7_15rw6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.876552, 2.56724, -3.47855)
+
+[node name="balk_13" parent="." instance=ExtResource("11_ws7kv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58006, 2.81431, -3.43724)
+
+[node name="balk_15" parent="." instance=ExtResource("11_ws7kv")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.90548, 2.53945, -0.553203)
+
+[node name="balk_16" parent="." instance=ExtResource("7_15rw6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.67131, 2.60211, -0.492396)
+
+[node name="balk_17" parent="." instance=ExtResource("12_isb47")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58963, 0.893728, 0.58517)
+
+[node name="balk_18" parent="." instance=ExtResource("13_t1iv1")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.907895, 0.897416, 1.20708)

@@ -1,23 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cc2wfhhw0nxpc"]
+[gd_scene load_steps=3 format=3 uid="uid://cvbinmmkmjnbo"]
 
-[ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_q4rs1"]
-[ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_yu2rs"]
-[ext_resource type="Environment" uid="uid://biw3oe3cy5oss" path="res://Scenes/lighting_env.tres" id="2_4k32d"]
-[ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="3_0u4x0"]
+[ext_resource type="PackedScene" uid="uid://6ocovhf65imp" path="res://Player/main_player.tscn" id="1_pqg0s"]
+[ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="2_dyx1s"]
 
-[node name="Main_Level" type="Node3D"]
-script = ExtResource("1_q4rs1")
+[node name="main_level" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("2_4k32d")
-
-[node name="MainPlayer" parent="." instance=ExtResource("1_yu2rs")]
+[node name="MainPlayer" parent="." instance=ExtResource("1_pqg0s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.068089, 1.19209e-07, -0.0825877)
 isgravity = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.51857)
-
-[node name="Monster" parent="." instance=ExtResource("3_0u4x0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192.727, 0, -948.138)
-
-[connection signal="radar_used" from="MainPlayer" to="Monster" method="_on_main_player_radar_used"]
+[node name="Monster" parent="." instance=ExtResource("2_dyx1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11121, -1.19209e-07, -574.459)

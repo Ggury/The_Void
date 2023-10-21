@@ -1,0 +1,187 @@
+[gd_scene load_steps=13 format=3 uid="uid://xph3upfny76d"]
+
+[ext_resource type="PackedScene" uid="uid://xdqgbjpxunhp" path="res://resources/MODELS/balk_1.glb" id="1_a4ign"]
+[ext_resource type="PackedScene" uid="uid://bph0imad75g7p" path="res://resources/MODELS/balk_6.glb" id="2_wrdaj"]
+[ext_resource type="PackedScene" uid="uid://dnvwhujjtxulb" path="res://resources/MODELS/balk_17.glb" id="3_rygj5"]
+[ext_resource type="PackedScene" uid="uid://cvmt1u5c8j67e" path="res://resources/MODELS/balk_18.glb" id="4_ja25u"]
+[ext_resource type="PackedScene" uid="uid://rt5853lffycn" path="res://resources/MODELS/balk_9.glb" id="5_h80ia"]
+[ext_resource type="PackedScene" uid="uid://co8rfmj4fetut" path="res://resources/MODELS/balk_5.glb" id="6_qsowt"]
+[ext_resource type="PackedScene" uid="uid://tmmuoira1pcb" path="res://resources/MODELS/balk_2.glb" id="7_wrw7s"]
+[ext_resource type="PackedScene" uid="uid://cb57jpx3041uh" path="res://resources/MODELS/balk_4.glb" id="8_sckha"]
+[ext_resource type="PackedScene" uid="uid://cydmccmtsg4pp" path="res://resources/MODELS/balk_3.glb" id="9_o040d"]
+[ext_resource type="PackedScene" uid="uid://db1vvca5eq4ad" path="res://resources/MODELS/balk_14.glb" id="10_jeaoq"]
+[ext_resource type="PackedScene" uid="uid://doiff1nft6hcb" path="res://resources/MODELS/balk_16.glb" id="11_10qlw"]
+[ext_resource type="PackedScene" uid="uid://deomnn0mbkyft" path="res://resources/MODELS/balk_13.glb" id="12_r5myo"]
+
+[node name="Shipwreck_1" type="Node3D"]
+
+[node name="balk_1" parent="." instance=ExtResource("1_a4ign")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.650225, 0.0243107, 2.98803)
+
+[node name="balk_6" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.022945, 0, -2.86409)
+
+[node name="balk_7" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.015281, 4.76837e-07, -0.42622)
+
+[node name="balk_8" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.50398, 0, -2.86409)
+
+[node name="balk_9" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.49632, 4.76837e-07, -0.42622)
+
+[node name="balk_23" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.022945, 5.11278, -2.86409)
+
+[node name="balk_24" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.015281, 5.11278, -0.42622)
+
+[node name="balk_25" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.50398, 5.11278, -2.86409)
+
+[node name="balk_26" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.49632, 5.11278, -0.42622)
+
+[node name="balk_27" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.015281, 5.11278, 2.0593)
+
+[node name="balk_28" parent="." instance=ExtResource("2_wrdaj")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -2.49632, 5.11278, 2.0593)
+
+[node name="balk_17" parent="." instance=ExtResource("3_rygj5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4703, -0.0170113, 1.93866)
+
+[node name="balk_18" parent="." instance=ExtResource("4_ja25u")]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0.0135088, 0, 1.93379)
+
+[node name="balk_10" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98149, 1.65554, 2.10168)
+
+[node name="balk_5" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.97802, 4.11668, 2.10811)
+
+[node name="balk_11" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98149, 1.65554, -0.39831)
+
+[node name="balk_12" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.97802, 4.11668, -0.391873)
+
+[node name="balk_13" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.98149, 1.65554, -2.88857)
+
+[node name="balk_14" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.97802, 4.11668, -2.88213)
+
+[node name="balk_2" parent="." instance=ExtResource("7_wrw7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97367, 0.22557, 5.83393)
+
+[node name="balk_15" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.46523, 1.65554, 2.10168)
+
+[node name="balk_16" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.4687, 4.11668, 2.10811)
+
+[node name="balk_19" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.46523, 1.65554, -0.39831)
+
+[node name="balk_20" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.4687, 4.11668, -0.391873)
+
+[node name="balk_21" parent="." instance=ExtResource("5_h80ia")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.46523, 1.65554, -2.88857)
+
+[node name="balk_22" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.4687, 4.11668, -2.88213)
+
+[node name="balk_55" parent="." instance=ExtResource("8_sckha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.765516, -0.0300226, -4.52437)
+
+[node name="balk_57" parent="." instance=ExtResource("8_sckha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.44132, 4.07229, -4.52437)
+
+[node name="balk_29" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, -4.53979, 4.98978, -2.84744)
+
+[node name="balk_30" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, -4.53979, 4.98978, -0.355159)
+
+[node name="balk_31" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, -4.53979, 4.98978, 2.1011)
+
+[node name="balk_32" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, 2.04688, 4.98978, -2.84744)
+
+[node name="balk_33" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, 2.04688, 4.98978, -0.355159)
+
+[node name="balk_34" parent="." instance=ExtResource("6_qsowt")]
+transform = Transform3D(1, 0, -4.37114e-08, -4.37114e-08, 1.91069e-15, -1, 0, 1, 1.91069e-15, 2.04688, 4.98978, 2.1011)
+
+[node name="balk_3" parent="." instance=ExtResource("1_a4ign")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.24802, 0, 3.05023)
+
+[node name="balk_53" parent="." instance=ExtResource("1_a4ign")]
+transform = Transform3D(-0.792832, 0.60944, -6.93116e-08, 0.60944, 0.792832, 5.32789e-08, 8.74228e-08, 0, -1, -5.10203, 0.676345, -5.11487)
+
+[node name="balk_35" parent="." instance=ExtResource("8_sckha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.774874, 5.03155, 3.85277)
+
+[node name="balk_36" parent="." instance=ExtResource("8_sckha")]
+transform = Transform3D(1, 0, 0, 0, 0.919032, -0.394183, 0, 0.394183, 0.919032, 0.757037, 4.67927, 5.22218)
+
+[node name="balk_47" parent="." instance=ExtResource("8_sckha")]
+transform = Transform3D(1, 0, 0, 0, 0.919032, -0.394183, 0, 0.394183, 0.919032, 3.01196, 4.67927, 4.31827)
+
+[node name="balk_37" parent="." instance=ExtResource("9_o040d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.37393, 3.08947, 4.22623)
+
+[node name="balk_54" parent="." instance=ExtResource("7_wrw7s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.525871, -0.0134773, -6.83307)
+
+[node name="balk_39" parent="." instance=ExtResource("10_jeaoq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.46574, 6.5674, -2.84408)
+
+[node name="balk_49" parent="." instance=ExtResource("10_jeaoq")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -5.46574, 3.56582, 2.23521)
+
+[node name="balk_40" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.45553, 6.55996, -0.769461)
+
+[node name="balk_41" parent="." instance=ExtResource("12_r5myo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48129, 6.59193, 1.69828)
+
+[node name="balk_42" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -5.49871, 6.57394, 1.98995)
+
+[node name="balk_58" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 2.96611, 3.21302, 2.12187)
+
+[node name="balk_43" parent="." instance=ExtResource("10_jeaoq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.98642, 6.59577, -2.84408)
+
+[node name="balk_44" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.97369, 6.60468, 1.48864)
+
+[node name="balk_51" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 2.97727, 2.90349, -2.97481)
+
+[node name="balk_50" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 2.97727, 4.14734, -2.84563)
+
+[node name="balk_45" parent="." instance=ExtResource("12_r5myo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.97746, 6.59193, -0.719303)
+
+[node name="balk_48" parent="." instance=ExtResource("12_r5myo")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 2.97746, 6.59193, -3.11482)
+
+[node name="balk_46" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 2.96004, 6.57394, 1.98995)
+
+[node name="balk_56" parent="." instance=ExtResource("11_10qlw")]
+transform = Transform3D(1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, -5.48876, 2.48372, -2.97767)
+
+[node name="balk_52" parent="." instance=ExtResource("3_rygj5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.51072, 0, -2.8484)
+
+[node name="balk_59" parent="." instance=ExtResource("9_o040d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.02716, 3.73492, -3.61878)
