@@ -24,17 +24,19 @@ func _process(delta):
 		look_at_player(player_position)
 		
 		radar_used = randi_range(min_radar_uses, max_radar_uses)
+
+
+func _physics_process(_delta):
+	var player_position = get_player_position()
 	
 	if is_agressive:
 		look_at(player_position, Vector3.UP)
 		
-		velocity = Vector3.FORWARD * max_speed
-		velocity = velocity.rotated(Vector3.UP, rotation.y)
-		velocity = velocity.rotated(Vector3.RIGHT, rotation.x)
-		velocity = velocity.rotated(Vector3.FORWARD, rotation.z)
-		print (velocity)
-
-func _physics_process(_delta):
+		velocity = position.direction_to(player_position) * max_speed
+		#velocity = velocity.rotated(Vector3.UP, rotation.y)
+		#velocity = velocity.rotated(Vector3.RIGHT, rotation.x)
+		#velocity = velocity.rotated(Vector3.FORWARD, rotation.z)
+		
 	move_and_slide()
 
 
@@ -74,6 +76,7 @@ func _on_vision_timer_timeout():
 		
 		if $VisionRayCast.is_colliding():
 			var collider = $VisionRayCast.get_collider()
+			print(collider.name)
 			if collider.name == "MainPlayer":
 				is_agressive = true
 
