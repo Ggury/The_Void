@@ -1,13 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://coj5gbwp6muvn"]
+[gd_scene load_steps=6 format=3 uid="uid://coj5gbwp6muvn"]
 
 [ext_resource type="Script" path="res://Monster/monster.gd" id="1_d8bwo"]
-[ext_resource type="PackedScene" uid="uid://dqb8eb3fnuxca" path="res://Monster/monster.glb" id="2_u7sbc"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_fgc7s"]
-radius = 50.0
-height = 100.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7epf"]
+[ext_resource type="PackedScene" uid="uid://dqb8eb3fnuxca" path="res://Monster/monster.glb" id="2_uq8av"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4oqcv"]
 radius = 1000.0
@@ -21,12 +15,8 @@ radius = 13.3667
 [node name="Monster" type="CharacterBody3D"]
 collision_mask = 0
 script = ExtResource("1_d8bwo")
-max_speed = 15
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-visible = false
-mesh = SubResource("SphereMesh_fgc7s")
-material = SubResource("StandardMaterial3D_u7epf")
+min_speed = 30
+max_speed = 50
 
 [node name="NearPlayerArea" type="Area3D" parent="."]
 
@@ -39,11 +29,11 @@ shape = SubResource("SphereShape3D_4oqcv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0138016, 0, -8.75406)
 shape = SubResource("BoxShape3D_np2ni")
 
-[node name="monster" parent="." instance=ExtResource("2_u7sbc")]
-transform = Transform3D(-12, 0, -1.04907e-06, 0, 12, 0, 1.04907e-06, 0, -12, 0, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.00347, -7.07425)
 shape = SubResource("SphereShape3D_rlhqx")
+
+[node name="monster" parent="." instance=ExtResource("2_uq8av")]
+transform = Transform3D(-12, 0, -1.04907e-06, 0, 12, 0, 1.04907e-06, 0, -12, 0, 0, 0)
 
 [connection signal="body_exited" from="NearPlayerArea" to="." method="_on_near_player_area_body_exited"]
