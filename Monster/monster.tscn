@@ -59,7 +59,7 @@ transform = Transform3D(146.939, 0, 0, 0, -4.45836e-06, -47.2672, 0, 101.995, -2
 shape = SubResource("ConvexPolygonShape3D_a1e4y")
 
 [node name="VisionTimer" type="Timer" parent="."]
-wait_time = 0.01
+wait_time = 0.05
 autostart = true
 
 [node name="VisionRayCast" type="RayCast3D" parent="."]
