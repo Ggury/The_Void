@@ -1,22 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://coj5gbwp6muvn"]
+[gd_scene load_steps=8 format=3 uid="uid://coj5gbwp6muvn"]
 
 [ext_resource type="Script" path="res://Monster/monster.gd" id="1_d8bwo"]
-[ext_resource type="PackedScene" uid="uid://dqb8eb3fnuxca" path="res://Monster/monster.glb" id="2_uq8av"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xaq5b"]
+radius = 50.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_fgc7s"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7epf"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4oqcv"]
 radius = 1000.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_np2ni"]
-size = Vector3(12.1322, 10.419, 8.95994)
+size = Vector3(62, 33, 43)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_rlhqx"]
-radius = 13.3667
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_a1e4y"]
+points = PackedVector3Array(0, 1, 0, 0.194988, -1, -0.980814, 0, -1, -1, -0.195184, -1, -0.980814, -0.382733, -1, -0.924041, -0.555599, -1, -0.831637, -0.707126, -1, -0.707126, -0.831637, -1, -0.555599, -0.924041, -1, -0.382733, -0.980814, -1, -0.195184, -1, -1, -0.000195742, -0.980814, -1, 0.194988, -0.924041, -1, 0.382537, -0.831637, -1, 0.555403, -0.707126, -1, 0.70693, -0.555599, -1, 0.831441, -0.382733, -1, 0.923845, -0.195184, -1, 0.980619, -0.000195742, -1, 1, 0.194988, -1, 0.980619, 0.382537, -1, 0.923845, 0.555403, -1, 0.831441, 0.70693, -1, 0.70693, 0.831441, -1, 0.555403, 0.923845, -1, 0.382537, 0.980619, -1, 0.194988, 1, -1, -0.000195742, 0.980619, -1, -0.195184, 0.923845, -1, -0.382733, 0.831441, -1, -0.555599, 0.70693, -1, -0.707126, 0.555403, -1, -0.831637, 0.382537, -1, -0.924041)
 
 [node name="Monster" type="CharacterBody3D"]
-collision_mask = 0
+motion_mode = 1
 script = ExtResource("1_d8bwo")
 min_speed = 30
 max_speed = 50
+
+[node name="MonsterCollisionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_xaq5b")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+mesh = SubResource("SphereMesh_fgc7s")
+material = SubResource("StandardMaterial3D_u7epf")
 
 [node name="NearPlayerArea" type="Area3D" parent="."]
 
@@ -24,16 +39,28 @@ max_speed = 50
 shape = SubResource("SphereShape3D_4oqcv")
 
 [node name="MouthArea" type="Area3D" parent="."]
+transform = Transform3D(0.732803, 0, 0, 0, 1, 0, 0, 0, 1.32263, -22.6516, 3.05176e-05, -36.9859)
+monitorable = false
 
 [node name="MouthCollisionShape" type="CollisionShape3D" parent="MouthArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0138016, 0, -8.75406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 4.40568)
 shape = SubResource("BoxShape3D_np2ni")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.00347, -7.07425)
-shape = SubResource("SphereShape3D_rlhqx")
+[node name="AreaOfSight" type="Area3D" parent="."]
+collision_layer = 2
 
-[node name="monster" parent="." instance=ExtResource("2_uq8av")]
-transform = Transform3D(-12, 0, -1.04907e-06, 0, 12, 0, 1.04907e-06, 0, -12, 0, 0, 0)
+[node name="AreaOfSightCollision" type="CollisionShape3D" parent="AreaOfSight"]
+transform = Transform3D(85.5091, 0, 0, 0, -4.45836e-06, -47.2672, 0, 101.995, -2.06611e-06, 0.170792, 3.8147e-06, -76.2368)
+shape = SubResource("ConvexPolygonShape3D_a1e4y")
+
+[node name="VisionTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="VisionRayCast" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -300)
+debug_shape_custom_color = Color(0.996078, 0, 0, 1)
 
 [connection signal="body_exited" from="NearPlayerArea" to="." method="_on_near_player_area_body_exited"]
+[connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
+[connection signal="timeout" from="VisionTimer" to="." method="_on_vision_timer_timeout"]
