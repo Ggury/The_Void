@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://doiff1nft6hcb"
-path="res://.godot/imported/balk_16.glb-62461bb23b8c27883703144d6e88f2f1.scn"
+uid="uid://dvhsuj1ttd45n"
+path="res://.godot/imported/barell.glb-6cda43663d1fbc3813da30bc54960008.scn"
 
 [deps]
 
-source_file="res://resources/MODELS/balk_16.glb"
-dest_files=["res://.godot/imported/balk_16.glb-62461bb23b8c27883703144d6e88f2f1.scn"]
+source_file="res://resources/MODELS/barell.glb"
+dest_files=["res://.godot/imported/barell.glb-6cda43663d1fbc3813da30bc54960008.scn"]
 
 [params]
 
@@ -28,12 +28,5 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={
-"nodes": {
-"PATH:Куб_011": {
-"generate/physics": true,
-"physics/shape_type": 2
-}
-}
-}
+_subresources={}
 gltf/embedded_image_handling=1

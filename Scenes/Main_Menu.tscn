@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3lbi1cxqlpiu"]
+
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_d0f0e"]
+[ext_resource type="Script" path="res://Scenes/Main_Menu.gd" id="1_j75p0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwl17"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j75p0")
+
+[node name="PanoramaImage(5)" type="Sprite2D" parent="."]
+position = Vector2(306, 377)
+texture = ExtResource("1_d0f0e")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 279.0
+offset_right = 672.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwl17")
+text = "PLAY"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 524.0
+offset_right = 652.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 55
+text = "QUIT"
+flat = true
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]

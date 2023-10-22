@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://doiff1nft6hcb"
-path="res://.godot/imported/balk_16.glb-62461bb23b8c27883703144d6e88f2f1.scn"
+uid="uid://dqb8eb3fnuxca"
+path="res://.godot/imported/monster.glb-74b04a585dcdc497760791382cfc4e48.scn"
 
 [deps]
 
-source_file="res://resources/MODELS/balk_16.glb"
-dest_files=["res://.godot/imported/balk_16.glb-62461bb23b8c27883703144d6e88f2f1.scn"]
+source_file="res://Monster/monster.glb"
+dest_files=["res://.godot/imported/monster.glb-74b04a585dcdc497760791382cfc4e48.scn"]
 
 [params]
 
@@ -30,8 +30,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Куб_011": {
-"generate/physics": true,
+"PATH:Plane": {
 "physics/shape_type": 2
 }
 }
