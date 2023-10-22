@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccfr1aoxvyupl"]
+[gd_scene load_steps=10 format=3 uid="uid://ccfr1aoxvyupl"]
 
 [ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_bt54g"]
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_v2kk4"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="2_dyx1s"]
 [ext_resource type="PackedScene" uid="uid://b05d8yg51jp8e" path="res://decorations/Shipwreck_2.tscn" id="4_lyltq"]
 [ext_resource type="PackedScene" uid="uid://dl0gukivyk7px" path="res://decorations/Shipwreck_3.tscn" id="6_cxcpt"]
-[ext_resource type="PackedScene" uid="uid://dvc84khebpdu7" path="res://quest_objects/Barell.tscn" id="7_081bi"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_e4wsf"]
 panorama = ExtResource("1_bt54g")
@@ -45,6 +44,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12323, 0, -17.7144)
 
 [node name="Shipwreck_3" parent="." groups=["radardetect"] instance=ExtResource("6_cxcpt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6621, 49.1016, 65.7732)
-
-[node name="Barell" parent="." instance=ExtResource("7_081bi")]
-transform = Transform3D(0.920081, 0.391727, 0, -0.36718, 0.862426, -0.348425, -0.136487, 0.320579, 0.937337, -0.746459, 1.78051, -15.9629)
