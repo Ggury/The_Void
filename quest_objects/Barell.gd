@@ -15,5 +15,7 @@ func _process(delta):
 
 func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "MainPlayer":
-		print("AA")
+		body.barell_counter +=1
+		body.checkpoint = $".".global_position
+		$".".queue_free()
 		

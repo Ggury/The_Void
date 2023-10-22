@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccfr1aoxvyupl"]
+[gd_scene load_steps=16 format=3 uid="uid://ccfr1aoxvyupl"]
 
 [ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_bt54g"]
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_v2kk4"]
@@ -6,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://coj5gbwp6muvn" path="res://Monster/monster.tscn" id="2_dyx1s"]
 [ext_resource type="PackedScene" uid="uid://b05d8yg51jp8e" path="res://decorations/Shipwreck_2.tscn" id="4_lyltq"]
 [ext_resource type="PackedScene" uid="uid://dl0gukivyk7px" path="res://decorations/Shipwreck_3.tscn" id="6_cxcpt"]
+[ext_resource type="PackedScene" uid="uid://dvc84khebpdu7" path="res://quest_objects/Barell.tscn" id="7_blwmt"]
+[ext_resource type="PackedScene" uid="uid://b4myvydgc0j1j" path="res://resources/MODELS/asteroids/asteroids3.glb" id="8_p8bha"]
+[ext_resource type="PackedScene" uid="uid://cj8oua6wppaqa" path="res://resources/MODELS/asteroids/asteroids1.glb" id="9_5s5q0"]
+[ext_resource type="PackedScene" uid="uid://xph3upfny76d" path="res://decorations/Shipwreck_1.tscn" id="10_x5b85"]
+[ext_resource type="PackedScene" uid="uid://be3hjueemc4uq" path="res://resources/MODELS/asteroids/asteroids2.glb" id="11_3s8at"]
+[ext_resource type="PackedScene" uid="uid://co41u4mbccg2u" path="res://decorations/Shipwreck_4.tscn" id="12_j0uks"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_e4wsf"]
 panorama = ExtResource("1_bt54g")
@@ -40,7 +46,93 @@ def_timer = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.58893, 0, -565.769)
 
 [node name="Shipwreck_2" parent="." instance=ExtResource("4_lyltq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12323, 0, -17.7144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12323, -1.95244, -17.7144)
 
-[node name="Shipwreck_3" parent="." groups=["radardetect"] instance=ExtResource("6_cxcpt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6621, 49.1016, 65.7732)
+[node name="Shipwreck_3" parent="." instance=ExtResource("6_cxcpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.6621, 47.1492, 65.7732)
+
+[node name="Barell2" parent="." instance=ExtResource("7_blwmt")]
+transform = Transform3D(0.986179, 0.165684, 0, -0.15859, 0.943949, -0.2895, -0.0479656, 0.285498, 0.957178, 1.72231, 1.69048, -18.1978)
+
+[node name="asteroids3" parent="." instance=ExtResource("8_p8bha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4297, -9.92922, 138.169)
+
+[node name="asteroids1" parent="." instance=ExtResource("9_5s5q0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.409, 1.19249, 112.531)
+
+[node name="Shipwreck_1" parent="." instance=ExtResource("10_x5b85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -181.641, 42.1142, 229.811)
+
+[node name="Barell" parent="." instance=ExtResource("7_blwmt")]
+transform = Transform3D(0.668806, -0.466406, -0.578933, 0, 0.778725, -0.627365, 0.743437, 0.419586, 0.520816, -182.9, 43.7844, 232.201)
+
+[node name="asteroids2" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -260.047, 63.4622, 472.244)
+
+[node name="asteroids4" parent="." instance=ExtResource("9_5s5q0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -309.831, 69.1816, 162.315)
+
+[node name="Shipwreck_4" parent="." instance=ExtResource("12_j0uks")]
+transform = Transform3D(0.954021, 0.0062608, -0.299673, 0.103227, 0.93176, 0.348092, 0.281403, -0.363022, 0.888272, -286.279, -225.899, 293.863)
+
+[node name="Shipwreck_5" parent="." instance=ExtResource("6_cxcpt")]
+transform = Transform3D(0.860413, 0.509597, 0, -0.415655, 0.701799, 0.578541, 0.294823, -0.497784, 0.815653, -212.699, 136.545, 404.946)
+
+[node name="Barell3" parent="." instance=ExtResource("7_blwmt")]
+transform = Transform3D(0.750469, 0.580281, -0.31634, -0.660906, 0.658918, -0.359209, 0, 0.478646, 0.878008, -247.443, 65.8452, 495.131)
+
+[node name="Shipwreck_6" parent="." instance=ExtResource("4_lyltq")]
+transform = Transform3D(-0.0790687, 0.596471, 0.798731, -0.539154, 0.648351, -0.537544, -0.838487, -0.473142, 0.270325, -602.142, -136.621, 476.487)
+
+[node name="Barell5" parent="." instance=ExtResource("7_blwmt")]
+transform = Transform3D(0.0598938, 0.692873, 0.718568, -0.557678, -0.573813, 0.599778, 0.827894, -0.436652, 0.352032, -572.715, -111.322, 436.332)
+
+[node name="asteroids5" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(0.925838, 1.77636e-15, 0.377922, -0.352827, 0.358319, 0.864361, -0.135417, -0.933599, 0.331745, -500.735, -44.3826, 426.704)
+
+[node name="asteroids6" parent="." instance=ExtResource("8_p8bha")]
+transform = Transform3D(0.843607, 0, -0.536961, -0.523615, 0.221566, -0.82264, 0.118972, 0.975145, 0.186914, -415.845, -268.12, 334.264)
+
+[node name="Shipwreck_7" parent="." instance=ExtResource("6_cxcpt")]
+transform = Transform3D(-0.851773, 0.523912, 0, -0.412307, -0.670326, -0.616981, -0.323243, -0.525528, 0.786978, 198.463, -88.9725, -256.31)
+
+[node name="asteroids7" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(-0.216416, -0.597385, -0.772202, 0.940205, -0.340609, 0, -0.263019, -0.726028, 0.635378, 299.909, -78.1915, -148.683)
+
+[node name="asteroids8" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.517, -159.006, 712.009)
+
+[node name="asteroids9" parent="." instance=ExtResource("8_p8bha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.517, -159.006, 712.009)
+
+[node name="asteroids10" parent="." instance=ExtResource("8_p8bha")]
+transform = Transform3D(0.981867, 0.0318394, 0.186879, 0.184115, 0.0746681, -0.980064, -0.0451586, 0.9967, 0.067452, -419.974, -84.066, 697.989)
+
+[node name="Shipwreck_8" parent="." instance=ExtResource("4_lyltq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.249, -10.0103, 554.236)
+
+[node name="Shipwreck_9" parent="." instance=ExtResource("10_x5b85")]
+transform = Transform3D(0.639981, -0.767707, -0.0324078, 0.354251, 0.332215, -0.874151, 0.681858, 0.54796, 0.484572, -108.065, 67.932, 483.909)
+
+[node name="asteroids11" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.842, 102.34, 450.361)
+
+[node name="asteroids12" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(0.376968, 0.555698, -0.741009, 0, 0.80003, 0.59996, 0.926226, -0.226166, 0.301586, -427.164, 61.6367, -289.276)
+
+[node name="asteroids13" parent="." instance=ExtResource("9_5s5q0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.344, 103.551, -264.222)
+
+[node name="asteroids14" parent="." instance=ExtResource("8_p8bha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.573, 79.528, -570.096)
+
+[node name="Shipwreck_10" parent="." instance=ExtResource("6_cxcpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -303.207, 94.2673, -422.785)
+
+[node name="Shipwreck_11" parent="." instance=ExtResource("12_j0uks")]
+transform = Transform3D(0.863704, -0.504, 0, 0.477366, 0.818061, 0.320778, -0.161672, -0.277057, 0.947154, 196.848, -388.2, -55.6423)
+
+[node name="asteroids15" parent="." instance=ExtResource("11_3s8at")]
+transform = Transform3D(0.37872, 0.203943, 0.254909, -0.326453, 0.236596, 0.295721, 0, -0.390422, 0.312362, 303.8, -209.749, -164.987)
+
+[connection signal="radar_used" from="MainPlayer" to="Monster" method="_on_main_player_radar_used"]

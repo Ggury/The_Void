@@ -6,7 +6,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_foxo5"]
 radius = 1.84223
 
-[node name="Barell" type="Node3D"]
+[node name="Barell" type="Node3D" groups=["radardetect"]]
 script = ExtResource("1_wpru0")
 
 [node name="barell" parent="." instance=ExtResource("1_dtp40")]

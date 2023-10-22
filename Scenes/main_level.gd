@@ -8,7 +8,8 @@ func _ready():
 	objects_to_detect = get_tree().get_nodes_in_group("radardetect")
 	
 func send_coords():
-	if !objects_to_detect:
+	objects_to_detect = get_tree().get_nodes_in_group("radardetect")
+	if not objects_to_detect:
 		print("Nothin else")
 	if objects_to_detect:
 		var distance = emitter.position.distance_to(objects_to_detect[0].position)

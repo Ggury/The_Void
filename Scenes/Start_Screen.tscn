@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3lbi1cxqlpiu"]
+[gd_scene load_steps=4 format=3 uid="uid://i67uoibw04pj"]
 
-[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_d0f0e"]
-[ext_resource type="Script" path="res://Scenes/Main_Menu.gd" id="1_j75p0"]
+[ext_resource type="Script" path="res://Scenes/Start_Screen.gd" id="1_j3yyy"]
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="2_q05e1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwl17"]
 
@@ -14,36 +14,33 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_j75p0")
+script = ExtResource("1_j3yyy")
 
 [node name="PanoramaImage(5)" type="Sprite2D" parent="."]
 position = Vector2(306, 377)
-texture = ExtResource("1_d0f0e")
+texture = ExtResource("2_q05e1")
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = -98.0
-offset_top = -52.0
-offset_right = 90.0
-offset_bottom = 41.0
+offset_left = -90.0
+offset_top = 220.0
+offset_right = 98.0
+offset_bottom = 313.0
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qwl17")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_qwl17")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_qwl17")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_qwl17")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qwl17")
-text = "PLAY"
+text = "START"
 flat = true
 
-[node name="Quit" type="Button" parent="."]
+[node name="TextEdit" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = -73.0
-offset_top = 212.0
-offset_right = 76.0
-offset_bottom = 296.0
-theme_override_font_sizes/font_size = 55
-text = "QUIT"
-flat = true
+offset_left = -267.0
+offset_top = -304.0
+offset_right = 267.0
+offset_bottom = 234.0
+theme_override_colors/background_color = Color(1, 1, 1, 0)
 
-[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

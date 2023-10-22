@@ -32,7 +32,7 @@ func _process(delta):
 		velocity = velocity.rotated(Vector3.UP, rotation.y)
 		velocity = velocity.rotated(Vector3.RIGHT, rotation.x)
 		velocity = velocity.rotated(Vector3.FORWARD, rotation.z)
-
+		print (velocity)
 
 func _physics_process(_delta):
 	move_and_slide()
