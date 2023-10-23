@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqb8eb3fnuxca" path="res://Monster/monster.glb" id="2_pt3cm"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xaq5b"]
-radius = 25.5133
+radius = 26.0427
 
 [sub_resource type="SphereMesh" id="SphereMesh_fgc7s"]
 radius = 50.0
@@ -28,7 +28,7 @@ min_speed = 30
 max_speed = 50
 
 [node name="MonsterCollisionShape" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.10064, 7.56812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.10064, 4.90686)
 shape = SubResource("SphereShape3D_xaq5b")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
@@ -55,16 +55,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.1152, -13.3806)
 collision_layer = 2
 
 [node name="AreaOfSightCollision" type="CollisionShape3D" parent="AreaOfSight"]
-transform = Transform3D(85.5091, 0, 0, 0, -4.45836e-06, -47.2672, 0, 101.995, -2.06611e-06, 0.170792, 3.8147e-06, -76.2368)
+transform = Transform3D(146.939, 0, 0, 0, -4.45836e-06, -47.2672, 0, 101.995, -2.06611e-06, 0.170792, 3.8147e-06, -76.2368)
 shape = SubResource("ConvexPolygonShape3D_a1e4y")
 
 [node name="VisionTimer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 0.05
 autostart = true
 
 [node name="VisionRayCast" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.1152, -13.3806)
-target_position = Vector3(0, 0, -300)
+transform = Transform3D(0.245867, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.1152, -13.3806)
+target_position = Vector3(0, 0, -400)
 debug_shape_custom_color = Color(0.996078, 0, 0, 1)
 
 [node name="monster" parent="." instance=ExtResource("2_pt3cm")]

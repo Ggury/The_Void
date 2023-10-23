@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cj8oua6wppaqa" path="res://resources/MODELS/asteroids/asteroids1.glb" id="9_5s5q0"]
 [ext_resource type="PackedScene" uid="uid://xph3upfny76d" path="res://decorations/Shipwreck_1.tscn" id="10_x5b85"]
 [ext_resource type="PackedScene" uid="uid://be3hjueemc4uq" path="res://resources/MODELS/asteroids/asteroids2.glb" id="11_3s8at"]
-[ext_resource type="PackedScene" uid="uid://co41u4mbccg2u" path="res://decorations/Shipwreck_4.tscn" id="12_j0uks"]
+[ext_resource type="PackedScene" path="res://decorations/Shipwreck_4.tscn" id="12_j0uks"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_e4wsf"]
 panorama = ExtResource("1_bt54g")
