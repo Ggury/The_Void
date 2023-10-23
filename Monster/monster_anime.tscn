@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwjumcikidwr8"]
+
+[ext_resource type="PackedScene" uid="uid://bp8eswn2fa801" path="res://Monster/monster_anime.glb" id="1_liodb"]
+[ext_resource type="Script" path="res://monster_anime.gd" id="2_n1lxi"]
+
+[node name="monster_anime" instance=ExtResource("1_liodb")]
+script = ExtResource("2_n1lxi")
+
+[node name="Armature" parent="." index="0"]
+transform = Transform3D(1.69317, -3.75959e-16, -1.64337e-23, 0, -7.40107e-08, 1.69317, -3.75959e-16, -1.69317, -7.40107e-08, 0, 0.3, -0.7)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/2/rotation = Quaternion(-6.56104e-15, -2.08175e-15, 0.383878, 0.923384)
+bones/3/rotation = Quaternion(1.47266e-14, 8.37319e-16, -0.442173, 0.89693)
+bones/4/rotation = Quaternion(-1.57458e-14, -8.1166e-16, 0.392241, 0.919863)
+bones/5/rotation = Quaternion(1.36927e-14, 1.67373e-15, -0.382519, 0.923948)
+bones/6/rotation = Quaternion(-5.38709e-15, -2.03794e-15, 0.469446, 0.882961)
+bones/8/rotation = Quaternion(2.48678e-14, -1.48484e-14, -0.0118064, 0.99993)
+bones/9/rotation = Quaternion(1.77676e-15, 1.60219e-14, 0.00957091, 0.999954)
+bones/10/rotation = Quaternion(4.08555e-14, -1.71105e-14, 0.00508528, 0.999987)

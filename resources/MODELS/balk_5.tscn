@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c876bruvgg0uj"]
+
+[ext_resource type="PackedScene" uid="uid://co8rfmj4fetut" path="res://resources/MODELS/balk_5.glb" id="1_4rcv0"]
+
+[node name="balk_5" instance=ExtResource("1_4rcv0")]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://i67uoibw04pj"]
+
+[ext_resource type="Script" path="res://Scenes/Start_Screen.gd" id="1_j3yyy"]
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="2_q05e1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwl17"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rspkg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4j7u2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gef4n"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3yyy")
+
+[node name="PanoramaImage(5)" type="Sprite2D" parent="."]
+position = Vector2(306, 377)
+texture = ExtResource("2_q05e1")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = -90.0
+offset_top = 220.0
+offset_right = 98.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwl17")
+text = "START"
+flat = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = -267.0
+offset_top = -304.0
+offset_right = 267.0
+offset_bottom = 234.0
+theme_override_colors/background_color = Color(1, 1, 1, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rspkg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4j7u2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_gef4n")
+text = "Year 2167. Humanity has reahed the stars. Ocasionally in a specific area of a recently reached star system space ships started disappering. You were sent to find out the reason. When you got there you noticed a space anomaly and after you got closer to examine it you saw a bright flash.
+The anomaly threw you out in a center of a void. Try to find enough fuel to get back.
+You have a radar that tells you how far a you from a barrel. Also it notifies you when something big is moving close to you.
+Be careful.
+Good luck...
+Controls:
+W,A,S,D,Space,C - moving
+R - Activatr Radar (helps you find barrels, but use it carefully, the monster can be triggered by the turned on radar)
+To pick up fuel from a barrel, approach it.
+Escape - exit from game"
+editable = false
+wrap_mode = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

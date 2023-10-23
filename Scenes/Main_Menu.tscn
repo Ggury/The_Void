@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://d3lbi1cxqlpiu"]
+
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_d0f0e"]
+[ext_resource type="Script" path="res://Scenes/Main_Menu.gd" id="1_j75p0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwl17"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5i0u8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6uvb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j87h0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8etcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7wcl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3hw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y61r4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_10qaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qhgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hbyd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_li1oj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvhr8"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j75p0")
+
+[node name="PanoramaImage(5)" type="Sprite2D" parent="."]
+position = Vector2(306, 377)
+texture = ExtResource("1_d0f0e")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = -98.0
+offset_top = -52.0
+offset_right = 90.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qwl17")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qwl17")
+text = "PLAY"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = -73.0
+offset_top = 212.0
+offset_right = 76.0
+offset_bottom = 296.0
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5i0u8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_r6uvb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_j87h0")
+text = "QUIT"
+flat = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 119.0
+offset_right = 60.0
+offset_bottom = 158.0
+theme_override_colors/background_color = Color(0, 0, 0, 0)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8etcm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y7wcl")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_l3hw8")
+text = "Fullscreen"
+editable = false
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 147.0
+offset_right = 15.0
+offset_bottom = 179.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y61r4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_10qaq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2qhgf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5hbyd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_li1oj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvhr8")
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]
+[connection signal="button_down" from="CheckBox" to="." method="_on_check_box_button_down"]
+[connection signal="button_up" from="CheckBox" to="." method="_on_check_box_button_up"]
+[connection signal="pressed" from="CheckBox" to="." method="_on_check_box_pressed"]

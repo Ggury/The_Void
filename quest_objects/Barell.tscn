@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvc84khebpdu7"]
+
+[ext_resource type="PackedScene" uid="uid://dvhsuj1ttd45n" path="res://resources/MODELS/barell.glb" id="1_dtp40"]
+[ext_resource type="Script" path="res://quest_objects/Barell.gd" id="1_wpru0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_foxo5"]
+radius = 1.84223
+
+[node name="Barell" type="Node3D" groups=["radardetect"]]
+script = ExtResource("1_wpru0")
+
+[node name="barell" parent="." instance=ExtResource("1_dtp40")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78973, 0)
+shape = SubResource("SphereShape3D_foxo5")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_shape_entered" from="Area3D" to="." method="_on_area_3d_body_shape_entered"]
