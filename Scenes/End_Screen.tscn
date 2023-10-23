@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://c8n8bcuii7wqh"]
+
+[ext_resource type="Script" path="res://Scenes/Main_Menu.gd" id="1_lpmt7"]
+[ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="2_ukuf4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6s6f8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bm8s3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wc70s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ct4kq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q60f6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_02fqm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6o2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5eqxo"]
+
+[node name="End_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lpmt7")
+
+[node name="PanoramaImage(5)" type="Sprite2D" parent="."]
+position = Vector2(306, 377)
+texture = ExtResource("2_ukuf4")
+
+[node name="button_2" type="Button" parent="."]
+offset_left = -73.0
+offset_top = 212.0
+offset_right = 76.0
+offset_bottom = 296.0
+theme_override_font_sizes/font_size = 55
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6s6f8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bm8s3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wc70s")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ct4kq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q60f6")
+text = "QUIT"
+flat = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = -226.0
+offset_top = -35.0
+offset_right = 237.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.686275, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0.686275, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(0.686275, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_02fqm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m6o2e")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_5eqxo")
+text = "You'll never come back"
+editable = false
+
+[connection signal="pressed" from="button_2" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="button_2" to="." method="_on_button_2_pressed"]

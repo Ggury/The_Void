@@ -19,12 +19,13 @@ signal radar_used
 @export var is_radar = false
 @export var checkpoint = Vector3(0,0,0)
 @export var barell_counter = 0
+var fuel = 0
 
 var direction
 var yaw = 0
 var pitch = 0
 var _velocity = Vector3.ZERO
-
+@export var dontmove:bool
 
 
 # Called when the node enters the scene tree for the first time.
@@ -39,6 +40,8 @@ func _input(event):
 		$".".rotation_degrees.y = yaw
 		$".".rotation_degrees.x = pitch
 
+func _process(delta):
+	$CanvasLayer/Fuel.text = str("Fuel:" + str(barell_counter*10) + "%")
 
 func _physics_process(delta):
 	
@@ -115,3 +118,9 @@ func _on_radar_timer_timeout():
 	$AudioStreamPlayer3D.play()
 	$CanvasLayer/TextEdit.text = str("x:"+str(int(distance.x)) +" y:" + str(int(distance.y)) + " z:" + str(int(distance.z)))
 	$CanvasLayer/TextEdit2.text = str("distance:" + str(int(distance.length())))
+
+
+func _on_monster_ate_player():
+	$".".global_position = checkpoint
+	get_node("../Monster").global_position = Vector3(8.589,0,-565.769)
+	get_node("../Monster").is_agressive = false

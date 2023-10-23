@@ -82,6 +82,18 @@ theme_override_colors/background_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0.662745, 0.305882, 1)
 theme_override_font_sizes/font_size = 30
 
+[node name="Fuel" type="TextEdit" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -76.0
+offset_right = 409.0
+grow_vertical = 0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.662745, 0.305882, 1)
+theme_override_font_sizes/font_size = 30
+text = "Fuel"
+
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

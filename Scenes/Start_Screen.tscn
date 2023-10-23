@@ -1,9 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://i67uoibw04pj"]
+[gd_scene load_steps=7 format=3 uid="uid://i67uoibw04pj"]
 
 [ext_resource type="Script" path="res://Scenes/Start_Screen.gd" id="1_j3yyy"]
 [ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="2_q05e1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwl17"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rspkg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4j7u2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gef4n"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -42,5 +48,11 @@ offset_top = -304.0
 offset_right = 267.0
 offset_bottom = 234.0
 theme_override_colors/background_color = Color(1, 1, 1, 0)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rspkg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4j7u2")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_gef4n")
+editable = false
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

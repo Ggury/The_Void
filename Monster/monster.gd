@@ -8,7 +8,7 @@ signal ate_player
 @export var max_radar_uses = 10
 
 var radar_used
-var is_agressive = false
+@export var is_agressive = false
 
 
 func _ready():

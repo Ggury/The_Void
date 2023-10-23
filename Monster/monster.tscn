@@ -51,15 +51,15 @@ transform = Transform3D(1, 0, 0, 0, 0.999999, 0, 0, 0, 1, 31.6093, 1.78083, -2.2
 shape = SubResource("BoxShape3D_np2ni")
 
 [node name="AreaOfSight" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.1152, -13.3806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.21738, -8.60731)
 collision_layer = 2
 
 [node name="AreaOfSightCollision" type="CollisionShape3D" parent="AreaOfSight"]
-transform = Transform3D(300, 0, 0, 0, -6.55671e-06, -300, 0, 150, -1.31134e-05, 0.170792, -13.7365, -95.5333)
+transform = Transform3D(146.939, 0, 0, 0, -3.59916e-06, -47.2672, 0, 82.3391, -2.06612e-06, 0.170792, 3.8147e-06, -70.8917)
 shape = SubResource("ConvexPolygonShape3D_a1e4y")
 
 [node name="VisionTimer" type="Timer" parent="."]
-wait_time = 0.05
+wait_time = 0.02
 autostart = true
 
 [node name="VisionRayCast" type="RayCast3D" parent="."]

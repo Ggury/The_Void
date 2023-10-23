@@ -24,3 +24,8 @@ func send_coords():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_scene_area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "MainPlayer":
+		get_tree().change_scene_to_file("res://Scenes/End_Screen.tscn")
