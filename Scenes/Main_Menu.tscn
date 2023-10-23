@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3lbi1cxqlpiu"]
+[gd_scene load_steps=16 format=3 uid="uid://d3lbi1cxqlpiu"]
 
 [ext_resource type="Texture2D" uid="uid://b07hdcrx28m6k" path="res://resources/panorama_image (5).png" id="1_d0f0e"]
 [ext_resource type="Script" path="res://Scenes/Main_Menu.gd" id="1_j75p0"]
@@ -16,6 +16,18 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7wcl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l3hw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y61r4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_10qaq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qhgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hbyd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_li1oj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvhr8"]
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -80,6 +92,12 @@ offset_left = -9.0
 offset_top = 147.0
 offset_right = 15.0
 offset_bottom = 179.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y61r4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_10qaq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2qhgf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5hbyd")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_li1oj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cvhr8")
 
 [connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]

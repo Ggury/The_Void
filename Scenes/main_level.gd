@@ -4,6 +4,7 @@ var objects_to_detect
 @onready var emitter = get_node("MainPlayer")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	emitter.radar_used.connect(send_coords)
 	objects_to_detect = get_tree().get_nodes_in_group("radardetect")
 	

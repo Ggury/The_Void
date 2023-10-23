@@ -33,6 +33,8 @@ func _ready():
 	checkpoint= $".".global_position
 
 func _input(event):
+	if event.is_action_pressed("Exit"):
+		get_tree().quit()
 	if event is InputEventMouseMotion:
 		yaw = fmod(yaw - event.relative.x * mouse_sencsitivy, 360)
 		pitch = max(min(pitch - event.relative.y * mouse_sencsitivy, 70), -70)

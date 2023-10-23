@@ -57,7 +57,12 @@ text = "Year 2167. Humanity has reahed the stars. Ocasionally in a specific area
 The anomaly threw you out in a center of a void. Try to find enough fuel to get back.
 You have a radar that tells you how far a you from a barrel. Also it notifies you when something big is moving close to you.
 Be careful.
-Good luck..."
+Good luck...
+Controls:
+W,A,S,D,Space,C - moving
+R - Radar (helps you find barrels, but use it carefully, the monster can be triggered by the turned on radar)
+To pick up fuel from a barrel, approach it.
+Escape - exit from game"
 editable = false
 wrap_mode = 1
 

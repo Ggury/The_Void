@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://coj5gbwp6muvn"]
+[gd_scene load_steps=10 format=3 uid="uid://coj5gbwp6muvn"]
 
 [ext_resource type="Script" path="res://Monster/monster.gd" id="1_d8bwo"]
 [ext_resource type="PackedScene" uid="uid://dqb8eb3fnuxca" path="res://Monster/monster.glb" id="2_pt3cm"]
+[ext_resource type="PackedScene" uid="uid://bwjumcikidwr8" path="res://Monster/monster_anime.tscn" id="3_ynypd"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xaq5b"]
 radius = 26.0427
@@ -69,6 +70,10 @@ debug_shape_custom_color = Color(0.996078, 0, 0, 1)
 
 [node name="monster" parent="." instance=ExtResource("2_pt3cm")]
 transform = Transform3D(-20, 0, -3.01992e-06, 0, 20, 0, 3.01992e-06, 0, -20, 0, 0, 10.8367)
+visible = false
+
+[node name="monster_anime" parent="." instance=ExtResource("3_ynypd")]
+transform = Transform3D(-20, 0, 1.74846e-06, 0, 20, 0, -1.74846e-06, 0, -20, 0, 0, 10.837)
 
 [connection signal="body_exited" from="NearPlayerArea" to="." method="_on_near_player_area_body_exited"]
 [connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]

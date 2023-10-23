@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.8731
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.84396, 0.908697, -0.349941)
 
 [node name="balk_16" parent="shipwreck21" instance=ExtResource("6_p7q28")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, 3.9707)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.885149, -1.64922, -0.113232)
 
 [node name="balk_14" parent="shipwreck21" instance=ExtResource("7_15rw6")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 3.90216, 2.52097, -0.503969)
