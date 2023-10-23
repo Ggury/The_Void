@@ -35,6 +35,7 @@ position = Vector2(306, 377)
 texture = ExtResource("2_ukuf4")
 
 [node name="button_2" type="Button" parent="."]
+layout_mode = 0
 offset_left = -73.0
 offset_top = 212.0
 offset_right = 76.0

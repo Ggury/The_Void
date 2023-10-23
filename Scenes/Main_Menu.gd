@@ -17,3 +17,20 @@ func _on_button_pressed():
 
 func _on_button_2_pressed():
 	get_tree().quit()
+
+
+func _on_check_box_pressed():
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	elif DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+#func _on_check_box_button_down():
+#	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+#
+#
+#
+#
+#func _on_check_box_button_up():
+#	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
