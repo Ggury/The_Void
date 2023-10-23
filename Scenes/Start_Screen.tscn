@@ -53,6 +53,12 @@ theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_rspkg")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4j7u2")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_gef4n")
+text = "Year 2167. Humanity has reahed the stars. Ocasionally in a specific area of a recently reached star system space ships started disappering. You were sent to find out the reason. When you got there you noticed a space anomaly and after you got closer to examine it you saw a bright flash.
+The anomaly threw you out in a center of a void. Try to find enough fuel to get back.
+You have a radar that tells you how far a you from a barrel. Also it notifies you when something big is moving close to you.
+Be careful.
+Good luck..."
 editable = false
+wrap_mode = 1
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
