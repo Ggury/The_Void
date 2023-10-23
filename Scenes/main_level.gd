@@ -11,7 +11,7 @@ func _ready():
 func send_coords():
 	objects_to_detect = get_tree().get_nodes_in_group("radardetect")
 	if not objects_to_detect:
-		print("Nothin else")
+		emitter.distance = 100000000
 	if objects_to_detect:
 		var distance = emitter.position.distance_to(objects_to_detect[0].position)
 		var nearobjpos = objects_to_detect[0].position

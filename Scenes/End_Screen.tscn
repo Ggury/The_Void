@@ -65,5 +65,5 @@ theme_override_styles/read_only = SubResource("StyleBoxEmpty_5eqxo")
 text = "You'll never come back"
 editable = false
 
-[connection signal="pressed" from="button_2" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="button_2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="button_2" to="." method="_on_quit_pressed"]

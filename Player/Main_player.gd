@@ -116,7 +116,6 @@ func _on_area_3d_body_shape_exited(body_rid, body, body_shape_index, local_shape
 
 func _on_radar_timer_timeout():
 	emit_signal("radar_used")
-	print(distance)
 	$AudioStreamPlayer3D.play()
 	$CanvasLayer/TextEdit.text = str("x:"+str(int(distance.x)) +" y:" + str(int(distance.y)) + " z:" + str(int(distance.z)))
 	$CanvasLayer/TextEdit2.text = str("distance:" + str(int(distance.length())))

@@ -83,5 +83,4 @@ func _on_vision_timer_timeout():
 
 func _on_mouth_area_body_entered(body):
 	if body.name == "MainPlayer" and is_agressive:
-		print("Game over")
 		ate_player.emit()
