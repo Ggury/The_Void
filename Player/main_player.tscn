@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://6ocovhf65imp"]
+[gd_scene load_steps=11 format=3 uid="uid://6ocovhf65imp"]
 
 [ext_resource type="Script" path="res://Player/Main_player.gd" id="1_8ccay"]
+[ext_resource type="Shader" path="res://Player/pixelashder.gdshader" id="2_sd0yb"]
 [ext_resource type="AudioStream" uid="uid://dgmglld1mxmpj" path="res://resources/Sounds/448743__matrixxx__underwater-signal.wav" id="2_xmcxs"]
 [ext_resource type="AudioStream" uid="uid://cot3ak1iffagc" path="res://resources/Sounds/57806__guitarguy1985__aircraftalarm.wav" id="3_mkxvn"]
 [ext_resource type="Shader" path="res://Player/vignette.gdshader" id="4_xj5c6"]
@@ -8,6 +9,13 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ry3fo"]
 radius = 0.260429
 height = 1.2334
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m1h1t"]
+render_priority = 0
+shader = ExtResource("2_sd0yb")
+
+[sub_resource type="QuadMesh" id="QuadMesh_sx3qq"]
+material = SubResource("ShaderMaterial_m1h1t")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v6sgt"]
 shader = ExtResource("4_xj5c6")
@@ -31,11 +39,16 @@ shape = SubResource("CapsuleShape3D_ry3fo")
 [node name="Camera3D" type="Camera3D" parent="."]
 current = true
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.18818)
+mesh = SubResource("QuadMesh_sx3qq")
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_xmcxs")
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_mkxvn")
+panning_strength = 0.25
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

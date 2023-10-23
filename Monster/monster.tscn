@@ -55,7 +55,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.1152, -13.3806)
 collision_layer = 2
 
 [node name="AreaOfSightCollision" type="CollisionShape3D" parent="AreaOfSight"]
-transform = Transform3D(146.939, 0, 0, 0, -4.45836e-06, -47.2672, 0, 101.995, -2.06611e-06, 0.170792, 3.8147e-06, -76.2368)
+transform = Transform3D(300, 0, 0, 0, -6.55671e-06, -300, 0, 150, -1.31134e-05, 0.170792, -13.7365, -95.5333)
 shape = SubResource("ConvexPolygonShape3D_a1e4y")
 
 [node name="VisionTimer" type="Timer" parent="."]
